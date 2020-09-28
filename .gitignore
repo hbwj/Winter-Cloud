@@ -1,0 +1,20 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.idea/.gitignore
+winter-auth/src/
+winter-cloud/.idea/.gitignore
+winter-cloud/.idea/compiler.xml
+winter-cloud/.idea/encodings.xml
+winter-cloud/.idea/misc.xml
+winter-cloud/.idea/vcs.xml
+winter-cloud/src/
+winter-common/winter-common-core/src/
+winter-common/winter-common-core/target/
+winter-common/winter-common-security-starter/src/
