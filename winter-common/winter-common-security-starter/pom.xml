@@ -6,7 +6,6 @@
         <artifactId>winter-common</artifactId>
         <groupId>com.winter.cloud</groupId>
         <version>2.3.3.RELEASE</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,5 +13,20 @@
     <name>Winter-Common-Security-Starter</name>
     <description>Winter-Common 安全Starter</description>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.winter.cloud</groupId>
+            <artifactId>winter-common-core</artifactId>
+            <version>${winter-cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>
