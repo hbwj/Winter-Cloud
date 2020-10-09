@@ -21,6 +21,8 @@
         <module>winter-common-core</module>
         <module>winter-common-datasource-starter</module>
         <module>winter-common-redis-starter</module>
+        <module>winter-common-doc</module>
+        <module>winter-common-doc-starter</module>
     </modules>
 
 
