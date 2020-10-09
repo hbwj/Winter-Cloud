@@ -20,6 +20,7 @@
         <module>winter-common-security-starter</module>
         <module>winter-common-core</module>
         <module>winter-common-datasource-starter</module>
+        <module>winter-common-redis-starter</module>
     </modules>
 
 
