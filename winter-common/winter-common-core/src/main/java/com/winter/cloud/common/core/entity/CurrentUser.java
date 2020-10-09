@@ -1,12 +1,17 @@
 package com.winter.cloud.common.core.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CurrentUser implements Serializable {
 
     private static final long serialVersionUID = 3051641262948412612L;
