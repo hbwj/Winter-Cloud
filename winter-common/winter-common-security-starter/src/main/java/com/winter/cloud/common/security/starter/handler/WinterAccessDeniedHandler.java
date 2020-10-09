@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 拒绝访问处理器
+ *  用来解决认证过的用户访问无权限资源时的异常
  */
 public class WinterAccessDeniedHandler implements AccessDeniedHandler {
     @Override

@@ -3,9 +3,8 @@ package com.winter.cloud.common.security.starter.properties;
 
 import com.winter.cloud.common.core.constant.EndpointConstant;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
-//@ConfigurationProperties(prefix = "windter.cloud.security")
+@ConfigurationProperties(prefix = "windter.cloud.security")
 public class WinterCloudSerityProperties {
 
     /**

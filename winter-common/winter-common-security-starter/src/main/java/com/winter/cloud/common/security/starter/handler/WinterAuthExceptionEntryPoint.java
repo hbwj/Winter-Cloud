@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 授权异常处理器
+ *  用来解决匿名用户访问无权限资源时的异常
  */
 @Slf4j
 public class WinterAuthExceptionEntryPoint implements AuthenticationEntryPoint {
