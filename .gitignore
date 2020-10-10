@@ -9,7 +9,7 @@ out
 gen
 .idea/.gitignore
 winter-auth/target/
-winter-cloud/.idea/**
+winter-cloud/.idea/
 winter-common/winter-common-core/target/
 
 winter-common/winter-common-datasource-starter/target/
