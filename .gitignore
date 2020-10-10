@@ -8,11 +8,13 @@
 out
 gen
 .idea/.gitignore
-winter-auth/src/
-winter-cloud/.idea/.gitignore
-winter-cloud/.idea/compiler.xml
-winter-cloud/.idea/encodings.xml
-winter-cloud/.idea/misc.xml
-winter-cloud/.idea/vcs.xml
+winter-auth/target/
+winter-cloud/.idea/**
 winter-common/winter-common-core/target/
 
+winter-common/winter-common-datasource-starter/target/
+winter-common/winter-common-doc-gateway-starter/target/
+winter-common/winter-common-doc-starter/target/
+winter-common/winter-common-doc/target/
+winter-common/winter-common-redis-starter/target/
+winter-common/winter-common-security-starter/target/
