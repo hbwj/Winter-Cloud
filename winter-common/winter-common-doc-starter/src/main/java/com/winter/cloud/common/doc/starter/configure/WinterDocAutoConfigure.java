@@ -6,11 +6,12 @@ import com.winter.cloud.common.doc.starter.properties.WinterDocProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.core.annotation.Order;
 import springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration;
 import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.AuthorizationCodeGrantBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.*;
@@ -35,6 +36,8 @@ public class WinterDocAutoConfigure {
         this.properties = properties;
     }
 
+    @Bean
+    @Order(-1)
     public Docket  createRestApiDoc() {
        return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
@@ -46,6 +49,7 @@ public class WinterDocAutoConfigure {
                 .apis(RequestHandlerSelectors.basePackage(properties.getBasePackage()))
                 .paths(PathSelectors.any())
                 .build()
+               /* 设置安全模式，swagger可以设置token验证 */
                 .securityContexts(Lists.newArrayList(securityContext()))
                 .securitySchemes(securitySchemes());
     }
