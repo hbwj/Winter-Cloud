@@ -4,3 +4,22 @@ server:
 spring:
   application:
     name: Winter-Auth
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 127.0.0.1:8001
+        register-enabled: true
+
+  redis:
+    database: 4
+    host: 192.168.2.223
+    port: 63791
+    password: 123456
+    lettuce:
+      pool:
+        min-idle: 8
+        max-idle: 500
+        max-active: 2000
+        max-wait: 10000
+    timeout: 5000
