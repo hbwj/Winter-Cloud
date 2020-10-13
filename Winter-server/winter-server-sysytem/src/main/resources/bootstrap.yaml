@@ -1,0 +1,18 @@
+server:
+  port: 8201
+
+spring:
+  application:
+    name: Winter-Server-System
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 127.0.0.1:8001
+        register-enabled: true
+security:
+  oauth2:
+    resource:
+      id: ${spring.application.name}
+      user-info-uri: http://127.0.0.1:8301/auth/user
+#      token-info-uri: http://127.0.0.0:8301/auth/oauth/token

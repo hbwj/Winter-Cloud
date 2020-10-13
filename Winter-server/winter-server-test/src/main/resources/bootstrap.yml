@@ -1,0 +1,17 @@
+server:
+  port: 8202
+
+spring:
+  application:
+    name: Winter-Server-Test
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 127.0.0.1:8001
+        register-enabled: true
+security:
+  oauth2:
+    resource:
+      id: ${spring.application.name}
+      user-info-uri: http://localhost:8301/auth/user

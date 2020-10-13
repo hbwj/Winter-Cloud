@@ -21,7 +21,8 @@
 
     <modules>
         <module>../winter-auth</module>
-        <module>../winter-common</module>
+        <module>../winter-gateway</module>
+        <module>../Winter-server</module>
     </modules>
 
 

@@ -1,0 +1,40 @@
+server:
+  port: 8301
+
+spring:
+  application:
+    name: Winter-Gateway
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 127.0.0.1:8001
+        register-enabled: true
+
+#      config:
+#        server-addr: 127.0.0.1:8001
+#        group: DEFAULT_GROUP
+#        prefix: winter-gateway
+#        file-extension: yaml
+    gateway:
+
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: Winter-Auth
+          uri: lb://Winter-Auth
+          predicates:
+            - Path=/auth/**
+#          filters:
+#            - StripPrefix=1
+        - id: Winter-Server-System
+          uri: lb://Winter-Server-System
+          predicates:
+            - Path=/system/**
+        - id: Winter-Server-test
+          uri: lb://Winter-Server-Test
+          predicates:
+            - Path=/test/**
+      default-filters:
+        - StripPrefix=1
